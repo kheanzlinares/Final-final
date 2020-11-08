@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    src: url(fonts/Helvetica.ttf);
+    font-family: helvetica;
+}
+body{
+    color: #000000;
+    font-family: helvetica;
+    text-align: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 480px;
+
+    display: flex;
+    flex-direction: column;
+}
+header{
+    padding-top: 30px;
+    margin-bottom: 60px;
+    background-color: #29abe5;
+    min-height: 70px;
+}
+h1{
+    clear: both;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-family: 'Notable', sans-serif;
+    letter-spacing: 10px;
+    text-shadow: 1px 1px 6px black;
+}
+h2{
+    clear: both;
+    color: #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px black;
+}
+label{
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    width: 26px;
+    cursor: pointer;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    display: none; 
+}
+#toggle{
+    clear: both;
+    display: none
+}
+.logo{
+    display: none;
+}
+.menu{
+    margin: 0 30px 0 0;
+    
+    display: flex;
+    flex-direction: column;
+}
+.menu a{
+    clear: right;
+    text-decoration: :none;
+    margin: 0 10px;
+    
+    display: flex;
+    flex-direction: column;
+}
+.main{
+    text-align: justify;
+    width: 62.5%;
+    margin-left: 100px;
+    
+    display: flex;
+    flex-direction: column;
+}
+img{
+    width: 300px;
+}
+article{
+    text-align: justify;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+aside{
+    max-width: 100%;
+    background-color: #efefef;
+}
+table{
+    max-width: 100%;
+}
+.source{
+    padding-bottom: 10px;
+}
+h3{
+    font-size: 25px;
+    padding-bottom: 10px;
+    color: crimson;
+}
+h4{
+    padding: 20px;
+}
+.tablet-pc{
+    display: none;
+}
+td{
+    font-size: 12px;
+}
+th{
+    font-size: 12px;
+    padding: 3px;
+}
+tr:nth-child(even){
+    background: #CCF;
+}
+tr:nth-child(odd){
+    background: #FFF;
+}
+tr:first-child{
+    background: black;
+    color: white;
+}
+td:first-child{
+    background: yellow;
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+footer{
+    clear: both;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 15px;
+}
+.copyright-cookies{
+    padding-top: 50px;
+}
+footer .copyright{
+    float: left;
+}
+.cookies{
+    float: right;
+    color: #FA0;
+    border: solid;
+    border-color: #FFF;
+    opacity: 50%;
+}
+
+
+
+
+
+
+/* MOBILE ONLY */
+@media only screen and (max-width: 480px){
+        label{
+        display: flex;
+        cursor: pointer;
+    }
+    .container{
+        min-width: 100%;
+    }
+    .menu{
+        text-align: :center;
+        min-width: 100%;
+        display: none;
+    }
+    .menu a{
+        display: flex;
+        border-bottom: 1px solid #EAEAEB;
+        margin: 0;
+        line-height: 70px;
+    }
+    #toggle:checked + .menu{
+        display: flex;
+    }
+    table{
+        min-width: 100%;
+    }
+    .pc, .tablet{
+        display: none;
+    }
+}
+
+
+
+
+
+/* TABLET ONLY */
+@media only screen and (min-width: 481px) and (max-width: 1179px){
+    header .logo{
+        display: flex;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        position:absolute; top:0; left:0;
+    }
+    .container{
+        min-width: 100%;
+        justify-content: center;
+    }
+    h1{
+        font-size: 60px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    nav{
+        font-size: 20px;
+    }
+    table{
+        min-width: 100%;
+        justify-content: center;
+    }
+    .tablet-pc{
+    display: block;
+    }
+    .pc{
+        display: none;
+    }
+    .aside-1{
+        display: none;
+    }
+    aside{
+        width: 31.25%;
+        
+        display: flex;
+        flex-direction: row;
+    }
+    img{
+        min-width: 100%;
+        float: left;
+    }
+    h4{
+        clear: both;
+    }
+}
+    
+    
+
+
+
+/* PC ONLY */
+@media only screen and (min-width: 1280px){
+        header .logo{
+        display: flex;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        position:absolute; top:0; left:0;
+    }
+    .container{
+        min-width: 100%;
+    }
+    h1{
+        font-size: 60px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    nav{
+        font-size: 20px;
+    }
+    td{
+        font-size: 15px;
+    }
+    th{
+        font-size: 20px;
+        padding: 3px;
+    }
+    h4{
+        font-size: 30px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    img{
+        padding-top: 50px;
+        width: 50%;
+    }
+    .tablet-pc{
+    display: block;
+    }
+    table{
+        float: left;
+        width: 62.5%;
+        clear: both;
+    }
+    aside{
+        clear: both;
+        width: 31.25%;
+        margin-right: 30px;
+        float: right;
+    }
+    aside h4{
+        text-align: center;
+        background-color: #29abe5;
+        color: #FFF;
+        padding: 5px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .source{
+        float: left;
+        clear: both;
+        padding-bottom: 20px;
+    }
+    
+}
